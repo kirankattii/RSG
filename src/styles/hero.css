@@ -1,0 +1,120 @@
+.container {
+  padding-top: 64px;
+  height: 100vh; /* Full window height */
+  overflow: hidden;
+  background-color: white;
+  position: relative;
+}
+
+.logo {
+  width: 128px;
+  height: 128px;
+  background-color: #dc2626;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+.logo.fixed {
+  position: fixed;
+  top: 32px;
+  width: 48px;
+  height: 48px;
+}
+
+.logo svg {
+  width: 80px;
+  height: 80px;
+  stroke: #facc15;
+  transition: all 0.3s ease;
+}
+
+.logo.fixed svg {
+  width: 32px;
+  height: 32px;
+}
+
+.marquee-container {
+  position: absolute;
+  inset: 0;
+  top: 10%;
+  bottom: 0;
+}
+
+.marquee-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 10%; /* Reduced height for each line to fit more lines */
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-rtl .marquee-content {
+  animation-direction: reverse;
+}
+
+/* Add this for alternating styles */
+.marquee-line-odd span {
+  color: #000; /* Black text for odd lines */
+  opacity: 0.57;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.marquee-line-even span {
+  -webkit-text-stroke: 1px black; /* Outline black */
+  -webkit-text-fill-color: white; /* Filled white for even lines */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.marquee-line span {
+  display: inline-block;
+  font-size: clamp(2rem, 5vw, 5rem); /* Increased and responsive font size */
+  font-weight: bold;
+  padding: 0 0.5rem;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 640px) {
+  .marquee-line {
+    height: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .logo svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo.fixed {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo.fixed svg {
+    width: 24px;
+    height: 24px;
+  }
+}

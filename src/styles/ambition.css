@@ -1,0 +1,224 @@
+@keyframes showContent {
+  from {
+    clip-path: circle(0% at 70% 50%);
+    background-color: #4f8b69;
+
+  }
+
+  to {
+    clip-path: circle(100% at 70% 50%);
+    background-color: #fff;
+  }
+}
+
+.ambition-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: calc(3rem + 2vw);
+}
+
+.ambition-content {
+  display: flex;
+}
+
+.ambition-right-section {
+  margin-bottom: 250px;
+}
+
+
+.ambition-left-section,
+.ambition-right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ambition-left-section h1 {
+  color: #92AA83;
+  line-height: 1.2;
+  /* margin-bottom: calc(1.5rem + 1vw); */
+  margin-top: 250px;
+}
+
+.ambition-left-section .ambition-left-title {
+  font-size: 6vw;
+}
+
+
+
+.ambition-right-section {
+  margin-top: calc(3rem + 1.5vw);
+}
+
+.ambition-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: calc(2rem + 1vw);
+  /* flex-direction: column; */
+  align-items: center;
+  gap: 40px;
+}
+
+
+.ambition-logo-image {
+  width: calc(64px + 1.5vw);
+  height: calc(64px + 1.5vw);
+  border-radius: 50%;
+  margin-right: calc(1.5rem + 1vw);
+  background-image: url('../assets/other/img-1.png');
+  background-size: cover;
+  transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out, clip-path 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.ambition-logo-image.clicked {
+  animation: showContent 1s forwards;
+}
+
+.ambition-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.ambition-logo-text {
+  font-size: 6vw;
+  ;
+  color: #92AA83;
+  font-weight: bold;
+}
+
+.ambition-logo .ambition-logo-text {
+  font-size: 6vw;
+}
+
+.ambition-f {
+  font-size: 6vw;
+  font-weight: bold;
+  margin-left: -20px;
+}
+
+.ambition-description {
+  font-size: calc(1.5rem + 0.5vw);
+  color: #666;
+  line-height: 1.5;
+}
+
+.ambition-right-section p {
+  font-size: 18px;
+}
+
+.new-section {
+  margin-top: calc(2rem + 1vw);
+  font-size: calc(1.5rem + 0.5vw);
+  color: #444;
+}
+
+
+.ambition-logo-text {
+  font-size: 64px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.ambition-f {
+  display: inline-block;
+  background-image: url('../assets/other/img-1.png');
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@media (max-width: 1000px) {
+  .ambition-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+  }
+}
+
+/* 
+@media (min-width: 768px) {
+  .ambition-container {
+    padding: calc(5rem + 2vw);
+  }
+
+  .ambition-content {
+    flex-direction: row;
+  }
+
+  .ambition-left-section h1 {
+    font-size: calc(6rem + 1vw);
+  }
+
+  .ambition-right-section {
+    margin-top: 0;
+    margin-left: calc(3rem + 1vw);
+  }
+
+  .ambition-logo-text {
+    font-size: calc(3rem + 1.5vw);
+  }
+
+  .ambition-description {
+    font-size: calc(1.3rem + 0.5vw);
+  }
+
+  .new-section {
+    font-size: calc(1.6rem + 0.5vw);
+  }
+} */
+
+
+@media(max-width:600px) {
+  .ambition-container {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0;
+    margin-top: -50px;
+    margin-bottom: 150px;
+
+  }
+
+  .ambition-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .ambition-right-section {
+    margin-bottom: 0px;
+    margin-top: 0;
+  }
+
+
+
+  .ambition-left-section h1 {
+    color: #92AA83;
+    line-height: 1.2;
+    /* margin-bottom: calc(1.5rem + 1vw); */
+    margin-top: 0px;
+  }
+
+  .ambition-left-section .ambition-left-title {
+    font-size: 14vw;
+  }
+
+  .ambition-logo .ambition-logo-text {
+    font-size: 13.5vw;
+  }
+
+  .ambition-f {
+    font-size: 13.5vw;
+    font-weight: bold;
+    margin-left: -20px;
+  }
+
+  .ambition-logo {
+    gap: 20px;
+  }
+}

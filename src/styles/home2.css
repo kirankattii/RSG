@@ -1,0 +1,17 @@
+.dynamic-image-grid-desktop {
+  display: block;
+}
+
+.dynamic-image-grid-mobile {
+  display: none;
+}
+
+@media(max-width:750px) {
+  .dynamic-image-grid-desktop {
+    display: none;
+  }
+
+  .dynamic-image-grid-mobile {
+    display: block;
+  }
+}

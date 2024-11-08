@@ -1,0 +1,115 @@
+.main {
+  overflow: hidden;
+}
+
+.Notable {
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.Notable h2 {
+  font-size: calc(2rem + 1.5vw);
+  font-weight: bold;
+  margin-bottom: calc(1.5rem + 1vw);
+  color: #8ba989;
+}
+
+.Notable ul {
+  list-style-type: decimal;
+  padding-left: calc(1.5rem + 1vw);
+  margin-bottom: calc(1.5rem + 2vw);
+  color: #8ba989;
+}
+
+.Notable li {
+  margin-bottom: calc(0.5rem + 0.75vw);
+  font-size: calc(1rem + 0.75vw);
+}
+
+/* Grid container */
+.grid-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-container .item {
+  padding: 10px;
+  color: white;
+  border-radius: 3px;
+  text-align: center;
+  flex: 1 1 calc(20% - 30px);
+  /* 5 items per row */
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.grid-container .item img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Dynamically assigned heights for the images */
+.same-first-last-height {
+  height: 300px;
+}
+
+.img-medium {
+  height: 250px;
+}
+
+.small-images {
+  height: 200px;
+}
+
+.img-extra-small {
+  height: 150px;
+}
+
+@media(max-width:700px) {
+
+  /* .grid-container .item {
+    padding: 10px;
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+    flex: 1 1 calc(30% - 30px);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-end;
+    overflow-x: auto;
+  } */
+  .same-first-last-height {
+    height: 300px;
+  }
+
+  .img-medium {
+    height: 250px;
+  }
+
+  .small-images {
+    height: 200px;
+  }
+
+  .img-extra-small {
+    height: 150px;
+  }
+
+
+  .grid-container .item {
+    overflow-x: auto;
+    /* width: 100%; */
+  }
+
+  .grid-container .item img {
+    width: 100%;
+    width: 150px;
+    object-fit: cover;
+    overflow: scroll;
+  }
+}

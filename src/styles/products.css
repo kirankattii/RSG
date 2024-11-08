@@ -1,0 +1,67 @@
+/* Container */
+.products-container {   
+    margin: 0 auto;
+    padding: 2rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Content wrapper */
+.products-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .products-content-wrapper {
+        flex-direction: row;
+    }
+}
+
+/* Text content */
+.products-text-content p {
+   font-size: calc(1rem + 1.5vw); /* Dynamic font-size based on viewport width */
+   color: #4a5568;
+}
+
+/* Image content */
+.products-image-responsive {
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Footer wrapper */
+.products-footer-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: calc(10% + 1rem); /* Dynamically space the gap between elements */
+    margin-right: calc(50px + 2vw); /* Dynamic margin-right based on viewport */
+}
+
+/* Title */
+.products-title {
+    font-size: calc(2rem + 2vw); /* Dynamic font size based on viewport width */
+    font-weight: 800;
+    color: #8BA989;
+}
+
+/* Button */
+.products-view-all-btn {
+    background-color: #8BA989;
+    color: #fff;
+    padding: calc(0.5rem + 0.5vw) calc(1rem + 1vw); /* Dynamic padding */
+    border-radius: 9999px;
+    font-size: calc(1rem + 0.5vw); /* Dynamic font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.products-view-all-btn:hover {
+    background-color: #7A9478;
+}

@@ -1,0 +1,299 @@
+.meetOurTeam-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    overflow: hidden;
+}
+
+.meetOurTeam-meet {
+    position: absolute;
+    top: 10%;
+    left: 20px;
+    font-size: calc(4.5rem + 2vw);
+    /* Dynamically scales with viewport */
+    font-weight: bold;
+    color: #92AA83;
+}
+
+
+.meetOurTeam-team {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: calc(4.5rem + 2vw);
+    /* Dynamically scales with viewport */
+    font-weight: bold;
+    color: #92AA83;
+}
+
+.meetOurTeam-image-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.meetOurTeam-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.meetOurTeam-description {
+    position: absolute;
+    top: 10%;
+    right: 20px;
+    width: 37%;
+    font-size: calc(0.9rem + 0.5vw);
+    /* Dynamically scales */
+    color: #000;
+    display: flex;
+}
+
+.meetOurTeam-team-members {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 100%;
+    font-size: calc(0.9rem + 0.5vw);
+    /* Dynamically scales */
+}
+
+.meetOurTeam-team-member {
+    margin-bottom: 10px;
+}
+
+.meetOurTeam-team-member h3 {
+    margin: 0;
+    font-weight: bold;
+    font-size: calc(1rem + 0.5vw);
+    /* Dynamically scales */
+    color: #000;
+}
+
+.meetOurTeam-team-member p {
+    margin: 0;
+    font-size: calc(0.9rem + 0.5vw);
+    /* Dynamically scales */
+    color: #92AA83;
+}
+
+.meetOurTeam-ceo {
+    font-size: calc(30px + 1vw) !important;
+    /* Base size 30px, and it scales with 2% of viewport width */
+    margin-bottom: calc(30px + 1vw) !important;
+    /* Dynamically adjust the margin-bottom */
+    color: #92AA83 !important;
+}
+
+.meetOurTeam-position.active {
+    font-size: calc(30px + 1vw) !important;
+    /* Base size 30px, and it scales with 2% of viewport width */
+    margin-bottom: calc(30px + 1vw) !important;
+    /* Dynamically adjust the margin-bottom */
+    color: #92AA83 !important;
+}
+
+/* Styling for the controls */
+.meetOurTeam-controls {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+.meetOurTeam-prev,
+.meetOurTeam-next {
+    background-color: #92AA83;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: calc(1rem + 0.3vw);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.meetOurTeam-prev:hover,
+.meetOurTeam-next:hover {
+    background-color: #6f8a63;
+}
+
+.meetOurTeam-prev:active,
+.meetOurTeam-next:active {
+    background-color: #5b7350;
+}
+
+/* 
+@media (max-width: 768px) {
+    .meetOurTeam-image-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .meetOurTeam-meet,
+    .meetOurTeam-team {
+        font-size: calc(1.5rem + 3vw);
+    }
+
+    .meetOurTeam-description,
+    .meetOurTeam-team-members {
+        font-size: calc(0.8rem + 1vw);
+    }
+
+    .meetOurTeam-controls {
+        bottom: 20px;
+        gap: 10px;
+    }
+
+    .meetOurTeam-prev,
+    .meetOurTeam-next {
+        padding: 8px 16px;
+        font-size: calc(0.8rem + 0.5vw);
+    }
+} */
+.meetOurTeam-description2 {
+    display: none;
+}
+
+@media(max-width:800px) {
+    .meetOurTeam-description {
+        position: absolute;
+        top: 10%;
+        right: 20px;
+        width: 50%;
+        font-size: 1.1rem;
+        /* Dynamically scales */
+        color: #000;
+    }
+}
+
+
+@media(max-width:600px) {
+    .meetOurTeam-description2 {
+        display: block;
+        width: 96%;
+        margin-top: -30px;
+    }
+
+    .meetOurTeam-description {
+        display: none;
+    }
+
+    .meetOurTeam-image-container {
+        position: absolute;
+        top: 28%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .meetOurTeam-team {
+        position: absolute;
+        top: 40%;
+        right: 20px;
+        font-size: 50px;
+        /* Dynamically scales with viewport */
+        font-weight: bold;
+        color: #92AA83;
+    }
+
+    .meetOurTeam-meet {
+        font-size: 50px;
+    }
+
+    .meetOurTeam-team-members {
+        position: absolute;
+        bottom: 60px;
+        left: 20px;
+        width: 100%;
+        font-size: calc(0.9rem + 0.5vw);
+        /* Dynamically scales */
+    }
+}
+
+
+
+@media(max-width:450px) {
+    .meetOurTeam-description2 {
+        display: block;
+    }
+
+    .meetOurTeam-description {
+        display: none;
+    }
+
+    .meetOurTeam-image-container {
+        position: absolute;
+        top: 24%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .meetOurTeam-team {
+        position: absolute;
+        top: 32%;
+        right: 20px;
+        font-size: 40px;
+        /* Dynamically scales with viewport */
+        font-weight: bold;
+        color: #92AA83;
+    }
+
+    .meetOurTeam-meet {
+        font-size: 40px;
+    }
+
+
+
+    .meetOurTeam-team-members {
+        /* position: relative; */
+        bottom: 180px;
+        left: 20px;
+        width: 100%;
+        font-size: calc(0.9rem + 0.5vw);
+        /* Dynamically scales */
+    }
+
+    .meetOurTeam-position.active {
+        font-size: 20px;
+        margin-bottom: calc(30px + 1vw) !important;
+        /* Dynamically adjust the margin-bottom */
+        color: #92AA83 !important;
+    }
+
+
+    .meetOurTeam-team-member {
+        margin-bottom: 0px;
+    }
+
+
+    .meetOurTeam-position.active {
+        width: 100%;
+        padding: 0;
+        font-size: 26px !important;
+        /* Base size 30px, and it scales with 2% of viewport width */
+        margin-bottom: calc(30px + 1vw) !important;
+        /* Dynamically adjust the margin-bottom */
+        color: #92AA83 !important;
+    }
+
+    .meetOurTeam-container {
+        margin: auto;
+        margin-bottom: -150px;
+    }
+}

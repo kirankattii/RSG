@@ -1,0 +1,87 @@
+.main {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: #92AA83;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.hoverArea {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(167, 243, 208, 0.5);
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #000;
+}
+
+.hoverArea:hover {
+  background-color: #92AA83;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ecfdf5;
+  color: #92AA83;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.hoverArea:hover .popup {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 8rem;
+  }
+}
+
+@media(max-width:450px) {
+  .main {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #92AA83;
+    min-height: 60vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+
+  }
+}

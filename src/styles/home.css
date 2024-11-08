@@ -1,0 +1,26 @@
+.scroll-container {
+    display: flex;
+    overflow: hidden;
+}
+
+.full-window {
+    min-width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Optional section background colors */
+.section-hero {
+    background-color: #f5f5f5;
+}
+
+.section-ambition {
+    background-color: #fff;
+}
+
+.section-carousel {
+    background-color: #e9ecef;
+}
